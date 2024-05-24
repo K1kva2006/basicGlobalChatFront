@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
   padding: 0;
@@ -12,6 +13,9 @@
   margin: 20px;
 }
 .second-wrap {
+  background-color: white;
+  position: fixed;
+  z-index: 10;
   display: flex;
   gap: 15px;
   align-items: center;
@@ -38,6 +42,9 @@
   display: flex;
   align-items: center;
   gap: 15px;
+}
+.message-cont:first-child {
+  margin-top: 100px;
 }
 .message {
   border: 2px dashed blue;
@@ -105,10 +112,16 @@ h1 {
   color: green;
 }
 @media only screen and (max-width: 800px) {
-  li, p, h2, h1, button, input {
-    font-size: 16px;
-  }
+  
   .login-popup {
     width: 95%;
+  }
+  .second-wrap {
+    flex-direction: column;
+  }
+  .message-cont {
+    flex-direction: column;
+    border: 2px solid rgb(12, 57, 255);
+    padding: 10px;
   }
 }

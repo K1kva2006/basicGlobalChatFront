@@ -117,6 +117,7 @@ h1 {
     width: 95%;
   }
   .second-wrap {
+    width: 100%;
     flex-direction: column;
   }
   .message-cont {

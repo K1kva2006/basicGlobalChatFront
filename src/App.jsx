@@ -15,7 +15,7 @@ function App() {
 
     function postMessage() {
         if (value.trim().length > 1) {
-            fetch("http://localhost:3000/", {
+            fetch("https://basicglobalchatback.onrender.com/", {
                 method: "POST",
                 body: JSON.stringify({
                     message: value,
@@ -33,7 +33,7 @@ function App() {
         inputRef.current.focus();
     }
     useEffect(() => {
-        fetch("http://localhost:3000/")
+        fetch("https://basicglobalchatback.onrender.com/")
             .then((res) => res.json())
             .then((messagesArray) => {
                 setMessages(messagesArray);
@@ -42,7 +42,7 @@ function App() {
     }, [messages]);
     useEffect(() => {
         const getMessages = setInterval(() => {
-            fetch("http://localhost:3000/")
+            fetch("https://basicglobalchatback.onrender.com/")
                 .then((res) => res.json())
                 .then((messagesArray) => {
                     setMessages(messagesArray);
@@ -93,7 +93,7 @@ function App() {
                                             messageObj.name ===
                                             localStorage.getItem("name")
                                         ) {
-                                            fetch("http://localhost:3000/", {
+                                            fetch("https://basicglobalchatback.onrender.com/", {
                                                 method: "DELETE",
                                                 body: JSON.stringify({
                                                     _id: messageObj._id,

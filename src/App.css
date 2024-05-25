@@ -13,6 +13,7 @@
   margin: 20px;
 }
 .second-wrap {
+  padding: 20px;
   background-color: white;
   position: fixed;
   display: flex;
